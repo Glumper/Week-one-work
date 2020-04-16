@@ -1,0 +1,149 @@
+#If Statments
+#questions 34-38
+
+#34
+num = input("Input a Integer ")
+if int(num) % 2 == 0:
+  print("Even")
+else:
+  print("Odd")
+#35
+age = input("Please enter age ")
+if int(age) >= 2:
+  age = (int(age) - 2)*4 + 10.5
+  print(f"Age in dog years is {age}")
+elif int(age) < 2 and int(age) > 0:
+ age = int(age)*7
+ print(f"Age in dog years is {age}")
+elif int(age) < 0:
+  print("Age cannot be neagtive")
+#36
+letter = input("Enter a letter ")
+if letter in "aeiou":
+  print("It's a Vowel")
+elif letter == "y":
+  print("Y is sometimes a Vowel")
+else:
+  print("The letter is a consonant")
+#37
+sides = input("How many sides are there? ")
+if int(sides) == 3:
+  print("Triangle")
+elif int(sides) == 4:
+  print("Quadrilateral")
+elif int(sides) == 5:
+  print("Pentagon")
+elif int(sides) == 6:
+  print("Hexagon")
+elif int(sides) == 7:
+  print("Heptagon")
+elif int(sides) == 8:
+  print("Octagon")
+elif int(sides) == 9:
+  print("Nonagon")
+elif int(sides) == 10:
+  print("Decagon")
+elif int(sides) > 10:
+  print("Too big") 
+elif int(sides) < 3:
+  print("Not a Shape")
+#38
+month = input("Input Month ")
+if month in ("January, March, May, July, August, October, December "):
+  print("31 days")
+elif month in {"April","June", "September", "Novebmer" }:
+  print("30 days")
+elif month == "February":
+  print("28 or 29 days")
+#Intro
+#1-5
+#1
+print("Ryan Xu")
+print("123 Good street")
+print("Ontario, Canada")
+#2
+name = input("Enter Name")
+print(f"Hello {name}!")
+#3
+length = input("Enter length ")
+width = input("Enter width ")
+area = int(length)*int(width)
+print(f"The room is {area} meters squared")
+#4
+length2 = input("Enter Length of Field")
+width2 = input("Enther Width of Field")
+area2 = int(length2)*int(width2)
+acres = area2/43560
+print(f"The Field is {acres} acres squared")
+#5
+liter = input("How many one liter or less bottles? ")
+moreliter = input("How many more than one liter bottles?")
+refund = int(liter)*0.1+int(moreliter)*0.25
+money = round(refund, 2)
+print(f"You will recieve ${money} back")
+#loops
+#61-64, 67
+#61
+number = 0
+count = 0
+g = 0
+while g != 1:
+  numberinp = input("Enter Number ")
+  number = number + int(numberinp)
+  if int(numberinp) == 0:
+    g +=1
+  count += 1
+number = number/(count-1)
+print(f"The average is {round(number, 2)}")
+#62
+price = 4.95
+done = False
+discount = 0.4
+newprice = price*discount
+count = 0
+print("Price Discount New Price")
+while done == False:
+  count += 1
+  print(price,   discount,    round(newprice, 2))
+  price += 5
+  newprice = price*discount
+  if count > 5:
+    done = True
+#63
+celsius = 0
+fahrenheit = 0
+print("Celsius Fahrenheit")
+while celsius < 100:
+  fahrenheit = celsius*9/5 + 32
+  print(celsius, round(fahrenheit, 3))
+  celsius += 10
+#64
+d = False
+amount = 0
+while True:
+  price2 = str(input("Enter Cost: " ))
+  if not price2:
+    break
+  amount += float((price2))
+penny = amount/0.01
+nickels = penny/5
+nickels = round(nickels)
+nickels = nickels*0.05 
+print(round(nickels, 2))
+#67
+agerequirement = 0
+cost = 0
+while True:
+  agerequirement = input("Enter age ")
+  if not agerequirement:
+    break
+  elif float(agerequirement) <= 2:
+    cost += 0.000
+  elif float(agerequirement) >= 3 and int(agerequirement) <= 12:
+    cost += 14.00
+  elif float(agerequirement) > 65:
+    cost += 18.00
+  else:
+    cost += 23.00
+cost = "{:.2f}".format(cost)
+print(f"The cost for admission is ${cost}")
